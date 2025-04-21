@@ -1,5 +1,5 @@
 {
-  "name": "@ixfi/widget",
+  "name": "@ixfi-lab/widget",
   "version": "3.18.7",
   "description": "LI.FI Widget for cross-chain bridging and swapping. It will drive your multi-chain strategy and attract new users from everywhere.",
   "type": "module",
