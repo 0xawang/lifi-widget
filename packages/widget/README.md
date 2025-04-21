@@ -37,13 +37,13 @@ LI.FI Widget is available as an [npm package](https://www.npmjs.com/package/@lif
 **pnpm:**
 
 ```sh
-pnpm add @lifi/widget wagmi @bigmi/react @solana/wallet-adapter-react @tanstack/react-query
+pnpm add @ixfi-lab/widget wagmi @bigmi/react @solana/wallet-adapter-react @tanstack/react-query
 ```
 
 **npm:**
 
 ```sh
-npm install @lifi/widget wagmi @bigmi/react @solana/wallet-adapter-react @tanstack/react-query
+npm install @ixfi-lab/widget wagmi @bigmi/react @solana/wallet-adapter-react @tanstack/react-query
 ```
 
 **yarn:**

@@ -57,6 +57,7 @@ export function WidgetViewContainer({
           ) : null}
           {isWalletManagementExternal ? (
             <Box display="flex" alignItems="center">
+              {/* @ts-expect-error msg */}
               <appkit-button />
             </Box>
           ) : null}

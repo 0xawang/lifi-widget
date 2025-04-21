@@ -199,8 +199,8 @@ export type WidgetLanguages = {
 } & AllowDeny<LanguageKey>
 
 export type RelayerConfig = {
-  support: Boolean
-  executeRoute: Function
+  support: boolean
+  executeRoute: (route: any) => Promise<void>
 }
 
 export type PoweredByType = 'default' | 'jumper'

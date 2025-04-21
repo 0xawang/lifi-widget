@@ -127,10 +127,11 @@ export const TransactionPage: React.FC = () => {
       })
     }
     tokenValueBottomSheetRef.current?.close()
-    if (relayer?.support && relayer?.executeRoute)
-      relayer.executeRoute(route);
-    else
+    if (relayer?.support && relayer?.executeRoute) {
+      relayer.executeRoute(route)
+    } else {
       executeRoute()
+    }
 
     setFieldValue('fromAmount', '')
     if (subvariant === 'custom') {
@@ -177,7 +178,6 @@ export const TransactionPage: React.FC = () => {
   }
 
   const getButtonText = (): string => {
-    console.log('subvariant', subvariant)
     switch (status) {
       case RouteExecutionStatus.Idle:
         switch (subvariant) {

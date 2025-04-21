@@ -18,8 +18,8 @@
     "unlink:bigmi": "pnpm link @bigmi/client",
     "link:sdk": "pnpm link @lifi/sdk",
     "unlink:sdk": "pnpm unlink @lifi/sdk",
-    "check:circular-deps": "madge --circular $(find ./src -name '*.ts' -o -name '*.tsx')",
-    "check:circular-deps-graph": "madge --circular $(find ./src -name '*.ts' -o -name '*.tsx') --image graph.svg"
+    "check:circular-deps": "madge --circular ./src",
+    "check:circular-deps-graph": "madge --circular ./src --image graph.svg"
   },
   "exports": {
     ".": "./src/index.ts",
