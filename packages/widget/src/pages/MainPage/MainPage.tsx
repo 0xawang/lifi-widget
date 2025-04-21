@@ -48,7 +48,7 @@ export const MainPage: React.FC = () => {
       ) : null}
       {!wideVariant ? <Routes sx={marginSx} /> : null}
       <SendToWalletButton sx={marginSx} />
-      <GasRefuelMessage mb={2} />
+      {/* <GasRefuelMessage mb={2} /> */}
       <MainWarningMessages mb={2} />
       <Box
         sx={{

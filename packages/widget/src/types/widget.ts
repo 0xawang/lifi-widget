@@ -198,6 +198,11 @@ export type WidgetLanguages = {
   default?: LanguageKey
 } & AllowDeny<LanguageKey>
 
+export type RelayerConfig = {
+  support: Boolean
+  executeRoute: Function
+}
+
 export type PoweredByType = 'default' | 'jumper'
 
 export interface RouteLabel {
@@ -270,6 +275,7 @@ export interface WidgetConfig {
     Partial<Record<'internal', string[]>>
   poweredBy?: PoweredByType
 
+  relayer?: RelayerConfig
   /**
    * Custom labels/badges to show on routes based on specified rules
    */

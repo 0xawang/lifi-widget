@@ -29,6 +29,7 @@ export const ReviewButton: React.FC = () => {
     navigate(navigationRoutes.transactionExecution, {
       state: { routeId: currentRoute.id },
     })
+    console.log('route', currentRoute)
     emitter.emit(WidgetEvent.RouteSelected, {
       route: currentRoute,
       routes: routes!,

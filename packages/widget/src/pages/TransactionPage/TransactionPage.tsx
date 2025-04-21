@@ -37,7 +37,7 @@ export const TransactionPage: React.FC = () => {
   const { setFieldValue } = useFieldActions()
   const emitter = useWidgetEvents()
   const { navigateBack } = useNavigateBack()
-  const { subvariant, subvariantOptions, contractSecondaryComponent } =
+  const { subvariant, subvariantOptions, contractSecondaryComponent, relayer } =
     useWidgetConfig()
   const { state }: any = useLocation()
   const stateRouteId = state?.routeId
@@ -127,7 +127,11 @@ export const TransactionPage: React.FC = () => {
       })
     }
     tokenValueBottomSheetRef.current?.close()
-    executeRoute()
+    if (relayer?.support && relayer?.executeRoute)
+      relayer.executeRoute(route);
+    else
+      executeRoute()
+
     setFieldValue('fromAmount', '')
     if (subvariant === 'custom') {
       setFieldValue('fromToken', '')
@@ -173,6 +177,7 @@ export const TransactionPage: React.FC = () => {
   }
 
   const getButtonText = (): string => {
+    console.log('subvariant', subvariant)
     switch (status) {
       case RouteExecutionStatus.Idle:
         switch (subvariant) {
